@@ -10,7 +10,7 @@ def _traverse_tree(root, tmp):
             #print "traversing child"
             _traverse_tree(child, tmp)
     else:
-        print root.attrib
+        #print root.attrib
         val = root.attrib['bounds']
         tmp.append(val)
     return tmp
@@ -32,7 +32,7 @@ def split_image(image_name, coordinates):
         for i in item:
             if i.isdigit() or i == ',':
                 tmp = tmp+i
-        print tmp
+        #print tmp
         tmp =  tmp.split(',')
         tmp = [float(i) for i in tmp]
         if tmp[2] - tmp[0] == 0 or tmp[3] - tmp[1] == 0:
