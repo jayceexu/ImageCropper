@@ -10,7 +10,7 @@ def _traverse_tree(root, tmp):
             #print "traversing child"
             _traverse_tree(child, tmp)
     else:
-        #print root.attrib
+        print root.attrib
         val = root.attrib['bounds']
         tmp.append(val)
     return tmp
@@ -23,6 +23,7 @@ def parse_xml(fname):
     return k
 
 def split_image(image_name, coordinates):
+    prefix = image_name.replace('.png', '')
     im = Image.open(image_name)
     cnt=1
     for item in coordinates:
@@ -31,11 +32,14 @@ def split_image(image_name, coordinates):
         for i in item:
             if i.isdigit() or i == ',':
                 tmp = tmp+i
-        #print tmp
+        print tmp
         tmp =  tmp.split(',')
         tmp = [float(i) for i in tmp]
+        if tmp[2] - tmp[0] == 0 or tmp[3] - tmp[1] == 0:
+            print "Invalidate parameter"
+            continue
         icon = im.crop((tmp[0], tmp[1], tmp[2], tmp[3]))
-        icon.save('_' + str(cnt) + '.png')  # generating all the parts
+        icon.save(prefix + '_' + str(cnt) + '.png')  # generating all the parts
         cnt = cnt+1
 
 

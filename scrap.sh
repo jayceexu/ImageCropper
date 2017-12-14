@@ -10,9 +10,8 @@ while [ true ]
 do
     sleep 5
     rounds=$(($rounds+1))
-    #uiautomator dump /sdcard/$file.txt
     echo $rounds
-    uiautomator dump /sdcard/screencaps/$rounds.xml
+    uiautomator dump $rounds.xml
     screencap -p $rounds.png
 
 done
