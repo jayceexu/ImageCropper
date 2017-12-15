@@ -15,7 +15,7 @@ mkdir uiCaps
 mv /sdcard/scrap.sh /sdcard/uiCaps/
 ```
 
-#### Running script on the device
+#### Running script
 ```
 adb shell 
 cd /sdcard/uiCaps/
@@ -23,10 +23,9 @@ sh scrap.sh
 ```
 
 ### On the desktop side
-#### Grabbing content from the device on the desktop
+#### Grabbing content from the device
 ```
 adb pull /sdcard/uiCaps/  .
-
 ```
 #### Parsing the XML and Splitting UI PNGs
 ```
