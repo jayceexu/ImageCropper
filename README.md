@@ -5,7 +5,8 @@
 
 ## Tutorial
 
-### Deploying on mobile/wearable devices
+### On the mobile/wearable side
+#### Deploying on mobile/wearable devices
 ```
 adb push scrap.sh /sdcard/
 adb shell
@@ -14,22 +15,20 @@ mkdir uiCaps
 mv /sdcard/scrap.sh /sdcard/uiCaps/
 ```
 
-### Running script on the device
+#### Running script on the device
 ```
 adb shell 
 cd /sdcard/uiCaps/
 sh scrap.sh
 ```
 
-### Grabbing content from the device on the desktop
+### On the desktop side
+#### Grabbing content from the device on the desktop
 ```
-mkdir exp
-# Copy parse.py into the 'exp' directory
-cd exp
 adb pull /sdcard/uiCaps/  .
 
 ```
-### Parsing the XML and Splitting UI PNGs
+#### Parsing the XML and Splitting UI PNGs
 ```
 cp ~/parse.py uiCaps/
 cd uiCaps/
