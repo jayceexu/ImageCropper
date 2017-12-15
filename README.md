@@ -31,7 +31,7 @@ adb pull /sdcard/uiCaps/  .
 ```
 ### Parsing the XML and Splitting UI PNGs
 ```
-cp ~/parse.py exp/  
-cd exp/
+cp ~/parse.py uiCaps/
+cd uiCaps/
 python parse.py
 ```
