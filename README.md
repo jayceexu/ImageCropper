@@ -6,6 +6,12 @@
 3. Splitting each UI PNG image into parts, based on the XML DOM tree description
 
 ## Tutorial
+First, please download this project  
+```
+git clone https://github.com/jayceexu/ImageCropper.git
+cd ./ImageCropper/
+```
+Then let's go with the scrapping.
 
 ### On the mobile/wearable side
 #### Deploying on mobile/wearable devices
