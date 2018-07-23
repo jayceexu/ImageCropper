@@ -31,13 +31,12 @@ cd /sdcard/uiCaps/
 sh scrap.sh
 ```
 
-### On the desktop side
+### Grabbing captured contents from the device
 Open another console and execute the commands as following. 
-#### Grabbing captured contents from the device
 ```
 adb pull /sdcard/uiCaps/  .
 ```
-#### Parsing the XML and Splitting UI into PNGs
+### Parsing the XML and Splitting UI into PNGs
 ```
 cp ~/parse.py uiCaps/
 cd uiCaps/
