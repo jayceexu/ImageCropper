@@ -16,14 +16,15 @@ Then let's go with the scrapping.
 ### On the mobile/wearable side
 #### Deploying on mobile/wearable devices
 ```
-adb push scrap.sh /sdcard/
+# Pushing scrap.sh onto the device
+adb push scrap.sh /sdcard/ 
 adb shell
 cd /sdcard/
 mkdir uiCaps
 mv /sdcard/scrap.sh /sdcard/uiCaps/
 ```
 
-#### Running script
+#### Running script on the device to start scrapping
 ```
 adb shell 
 cd /sdcard/uiCaps/
