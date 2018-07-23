@@ -1,6 +1,7 @@
 # ImageCropper
 1. Capturing XML DOM tree of current UI displayed on screen from mobile/wearable devices
 2. Capturing UI PNG file of current UI
+
    Caution: while capturing, please wait 5 second for each UI as each capturing procedure takes 5 seconds.
 3. Splitting each UI PNG image into parts, based on the XML DOM tree description
 
