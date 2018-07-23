@@ -15,8 +15,8 @@ Then let's go with the scrapping.
 
 ### On the mobile/wearable side
 #### Deploying on mobile/wearable devices
+Pushing scrap.sh onto the device
 ```
-# Pushing scrap.sh onto the device
 adb push scrap.sh /sdcard/ 
 adb shell
 cd /sdcard/
